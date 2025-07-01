@@ -42,7 +42,7 @@ Stride’s Minimum Viable Product (MVP) is a mobile application for Android. Thi
 https://drive.google.com/file/d/1ZiIMMDFg7z799-HgGOpxZTUuCSpgd4KK/view
 
 
-# Figma demo link:
+# Figma demo link: (flow 2)
 https://www.figma.com/proto/tCKWwVVyshQYqruV3LuGLw/TUGAS?node-id=88-217&t=afhHjIuPF2pdO2XH-1&scaling=scale-down&content-scaling=fixed&page-id=87%3A16&starting-point-node-id=88%3A217&show-proto-sidebar=1
 
 Reports are crowdsourced and verified by the community to ensure accuracy.
