@@ -38,8 +38,11 @@ Stride leverages the power of crowdsourcing to gather real-time data, facilitati
 Stride’s Minimum Viable Product (MVP) is a mobile application for Android. This MVP enables users to report road damage, utilizes GPS for precise location tagging, allows photo uploads for visual evidence, and includes a simple description field.
 
 
+#Demo Link Video
+https://drive.google.com/file/d/1ZiIMMDFg7z799-HgGOpxZTUuCSpgd4KK/view
 
-# demo link:
+
+# Figma demo link:
 https://www.figma.com/proto/tCKWwVVyshQYqruV3LuGLw/TUGAS?node-id=88-217&t=afhHjIuPF2pdO2XH-1&scaling=scale-down&content-scaling=fixed&page-id=87%3A16&starting-point-node-id=88%3A217&show-proto-sidebar=1
 
 Reports are crowdsourced and verified by the community to ensure accuracy.
