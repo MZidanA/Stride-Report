@@ -1,6 +1,3 @@
-Berikut versi revisi dari **Stride-Report** dalam bahasa Indonesia dan Inggris, setelah bagian tentang *dashboard* dihapus dari kedua versi:
-
----
 
 # Stride-Report
 
