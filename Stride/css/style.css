@@ -3,7 +3,7 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* Tetap netral */
+    background-color: #f0f2f5; /* Light gray background for a modern feel */
     color: #333;
     line-height: 1.6;
     display: flex;
@@ -13,32 +13,33 @@ body {
 
 /* Header Styles */
 .header {
-    background-color: #F7931E; /* Oranye dari logo */
+    background-color: #F7931E; /* Orange from logo */
     color: white;
-    padding: 1rem 0;
+    padding: 1.2rem 0; /* Slightly more padding */
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Stronger, softer shadow */
+    border-radius: 0 0 20px 20px; /* More rounded bottom corners */
 }
 
 .header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
+    font-size: 2.8rem; /* Slightly larger */
+    letter-spacing: 1.5px; /* More prominent */
+    font-weight: 700; /* Bolder */
 }
 
 /* Navigation Bar Styles */
 .navbar {
-    background-color: #333; /* Tetap gelap untuk kontras */
+    background-color: #2c3e50; /* Dark blue/gray for contrast */
     overflow: hidden;
     padding: 0.8rem 0;
     border-radius: 15px;
-    margin: 1rem auto;
+    margin: 1.5rem auto; /* More margin */
     width: 90%;
     max-width: 1200px;
     display: flex;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Consistent shadow */
 }
 
 .navbar a {
@@ -46,48 +47,50 @@ body {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 14px 22px; /* More padding */
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.15rem; /* Slightly larger font */
+    font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     border-radius: 10px;
-    margin: 0 5px;
+    margin: 0 8px; /* More spacing */
 }
 
 .navbar a:hover {
-    background-color: #575757; /* Sedikit lebih terang dari hitam */
-    color: #FFD700; /* Warna aksen gold/kuning cerah */
-    transform: translateY(-2px);
+    background-color: #34495e; /* Slightly lighter dark blue */
+    color: #FFD700; /* Accent gold/bright yellow */
+    transform: translateY(-3px); /* More pronounced lift */
 }
 
 .navbar a.active {
-    background-color: #F7931E; /* Oranye dari logo untuk active link */
+    background-color: #F7931E; /* Orange from logo for active link */
     color: white;
     font-weight: bold;
+    box-shadow: 0 2px 8px rgba(247, 147, 30, 0.4); /* Shadow for active button */
 }
 
 /* Main Content Area */
 .container {
     flex: 1;
-    width: 90%;
-    max-width: 960px;
-    margin: 20px auto;
+    width: 92%; /* Slightly wider */
+    max-width: 1000px; /* Increased max-width */
+    margin: 25px auto; /* More margin */
     background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 35px; /* More padding */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 0 20px rgba(0,0,0,0.08); /* Softer, wider shadow */
 }
 
 /* Form Styles */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* More space */
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
+    margin-bottom: 10px; /* More space */
+    font-weight: 600; /* Bolder label */
+    color: #444;
 }
 
 .form-group input[type="text"],
@@ -95,12 +98,12 @@ body {
 .form-group input[type="password"],
 .form-group textarea,
 .form-group input[type="file"] {
-    width: calc(100% - 20px);
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 14px; /* More padding */
+    border: 1px solid #e0e0e0; /* Lighter border */
+    border-radius: 10px; /* More rounded */
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 1.05rem; /* Slightly larger font */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -108,148 +111,234 @@ body {
 .form-group input[type="email"]:focus,
 .form-group input[type="password"]:focus,
 .form-group textarea:focus {
-    border-color: #F7931E; /* Border fokus warna oranye */
-    box-shadow: 0 0 8px rgba(247, 147, 30, 0.2); /* Shadow oranye */
+    border-color: #F7931E;
+    box-shadow: 0 0 10px rgba(247, 147, 30, 0.3); /* Stronger orange shadow */
     outline: none;
 }
 
 /* Button Styles */
 .btn {
     display: inline-block;
-    background-color: #F7931E; /* Oranye dari logo */
+    background-color: #F7931E;
     color: white;
-    padding: 12px 25px;
+    padding: 14px 30px; /* More padding */
     border: none;
-    border-radius: 8px;
+    border-radius: 10px; /* More rounded */
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1.15rem; /* Slightly larger font */
+    font-weight: 600;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.12); /* Softer shadow */
 }
 
 .btn:hover {
-    background-color: #E68A1B; /* Sedikit lebih gelap dari oranye */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    background-color: #E68A1B;
+    transform: translateY(-3px); /* More pronounced lift */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18); /* Stronger shadow on hover */
 }
 
 .btn-secondary {
-    background-color: #6c757d; /* Abu-abu netral */
+    background-color: #6c757d;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .btn-secondary:hover {
     background-color: #5a6268;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
 .btn-danger {
-    background-color: #dc3545; /* Tetap merah untuk bahaya */
+    background-color: #dc3545;
+    box-shadow: 0 4px 10px rgba(220,53,69,0.2);
 }
 
 .btn-danger:hover {
     background-color: #c82333;
+    box-shadow: 0 6px 14px rgba(220,53,69,0.3);
 }
 
 /* Message Styles */
 .message {
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 18px; /* More padding */
+    margin-bottom: 25px; /* More margin */
+    border-radius: 10px; /* More rounded */
+    font-size: 1.05rem;
     font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle shadow */
 }
 
 .message.success {
-    background-color: #d4edda; /* Tetap hijau muda untuk sukses */
+    background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
 }
 
 .message.error {
-    background-color: #f8d7da; /* Tetap merah muda untuk error */
+    background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
 
-/* Report Card Styles (for Community, Notifications, Admin Dashboard) */
-.report-card {
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
+/* Bento Grid Container for Community, Notifications, Admin Dashboard */
+.bento-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns, min 300px width */
+    gap: 25px; /* More space between items */
+    padding: 0; /* Container padding handled by .container */
+    margin-top: 25px; /* Space from heading */
 }
 
-.report-content {
-    flex-grow: 1;
+/* Report Card Styles (Individual Bento Items) */
+.report-card {
+    background-color: #ffffff; /* White background */
+    border: none; /* Remove default border */
+    border-radius: 18px; /* Significantly more rounded corners for bento look */
+    padding: 25px; /* Generous padding */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Softer, deeper shadow */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-card:hover {
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.report-card img {
+    width: 100%;
+    height: 220px; /* Fixed height for consistency, allows object-fit */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 12px; /* Rounded corners for images */
+    margin-bottom: 20px; /* More space below image */
 }
 
 .report-content h3 {
     margin-top: 0;
-    color: #F7931E; /* Judul laporan warna oranye */
-    font-size: 1.5rem;
+    color: #F7931E; /* Report title in orange */
+    font-size: 1.6rem; /* Slightly larger title */
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .report-content p {
     margin-bottom: 8px;
     color: #555;
+    font-size: 1rem;
 }
 
 .report-actions {
     display: flex;
-    gap: 10px;
-    margin-top: 15px;
-    flex-wrap: wrap;
+    gap: 12px; /* More space between buttons */
+    margin-top: 20px; /* More margin */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    align-items: center; /* Vertically align items */
 }
 
 /* Admin Dashboard Specifics */
 .admin-report-actions {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 15px; /* More space */
+    margin-top: 20px;
 }
 
 .admin-report-actions select {
-    padding: 8px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+    font-size: 1rem;
+    width: auto; /* Allow select to size naturally */
 }
 
 /* Footer Styles */
 .footer {
-    background-color: #333; /* Tetap gelap untuk kontras */
+    background-color: #2c3e50; /* Dark blue/gray */
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0; /* More padding */
     margin-top: auto;
-    border-radius: 15px 15px 0 0;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    border-radius: 20px 20px 0 0; /* More rounded top corners */
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+    font-size: 0.95rem;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
     .navbar {
         flex-direction: column;
         width: 95%;
+        margin: 1rem auto;
     }
     .navbar a {
         float: none;
         width: 100%;
         text-align: left;
         margin: 5px 0;
+        padding: 12px 15px;
+    }
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin: 15px auto;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group textarea,
+    .form-group input[type="file"] {
+        width: calc(100% - 20px); /* Adjust for smaller padding */
+        padding: 10px;
+    }
+    .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    /* Bento grid collapses to single column */
+    .bento-grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
     .report-card {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 18px;
     }
     .report-card img {
-        width: 100%;
-        max-width: unset;
+        height: 180px; /* Slightly smaller images on mobile */
+        margin-bottom: 15px;
+    }
+    .report-content h3 {
+        font-size: 1.4rem;
+    }
+    .report-actions {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px;
+    }
+    .report-actions .btn {
+        width: 100%; /* Make buttons full width */
+        text-align: center;
+    }
+    .admin-report-actions {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    .container {
+        padding: 15px;
+    }
+    .report-card {
+        padding: 15px;
+    }
+    .report-card img {
+        height: 150px;
     }
 }

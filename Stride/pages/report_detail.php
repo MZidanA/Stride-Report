@@ -1,9 +1,55 @@
 <?php
+require_once __DIR__ . '/../config/db.php';
+require_once __DIR__ . '/../includes/functions.php';
+
+// --- HEADER PEMISAH MODE ---
+if (strtoupper($_SERVER['REQUEST_METHOD']) === 'GET' && (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false || isset($_GET['api']))) {
+    // #############################################
+    // ############# MODE: BACKEND API #############
+    // #############################################
+
+    $report_id = $_GET['id'] ?? null;
+
+    if (!isset($report_id) || !is_numeric($report_id)) {
+        apiResponse(['success' => false, 'error_message' => 'ID laporan tidak valid.'], 400);
+    }
+
+    $report = null;
+    $stmt = $conn->prepare("
+        SELECT r.id, r.image_path, r.address_text, r.map_link, r.status, u.name AS reporter_name, COUNT(v.id) AS upvote_count, r.created_at
+        FROM reports r
+        JOIN users u ON r.user_id = u.id
+        LEFT JOIN upvotes v ON r.id = v.report_id
+        WHERE r.id = ?
+        GROUP BY r.id
+    ");
+    $stmt->bind_param("i", $report_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows > 0) {
+        $report = $result->fetch_assoc();
+        // Bentuk URL lengkap gambar untuk respons API
+        $report['full_image_url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $report['image_path'];
+        $report['created_at_formatted'] = date('d M Y H:i', strtotime($report['created_at']));
+    }
+    $stmt->close();
+
+    if (!$report) {
+        apiResponse(['success' => false, 'error_message' => 'Laporan tidak ditemukan.'], 404);
+    } else {
+        apiResponse(['success' => true, 'report' => $report]);
+    }
+    exit();
+}
+
+// #############################################
+// ############# MODE: WEB FRONTEND ############
+// #############################################
 require_once __DIR__ . '/../includes/header.php';
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     $_SESSION['error_message'] = "ID laporan tidak valid.";
-    redirect('/stride/pages/community.php'); // PERBAIKAN: path redirect
+    redirect('/stride/stride-report/pages/community.php');
 }
 
 $report_id = $_GET['id'];
@@ -27,7 +73,7 @@ $stmt->close();
 
 if (!$report) {
     $_SESSION['error_message'] = "Laporan tidak ditemukan.";
-    redirect('/stride/pages/community.php'); // PERBAIKAN: path redirect
+    redirect('/stride/stride-report/pages/community.php');
 }
 ?>
 
@@ -51,7 +97,8 @@ if (!$report) {
         <p><strong>Upvotes:</strong> <?php echo htmlspecialchars($report['upvote_count']); ?></p>
         <div class="report-actions">
             <a href="<?php echo htmlspecialchars($report['map_link']); ?>" target="_blank" class="btn btn-secondary">Lihat Peta</a>
-            <a href="/stride/pages/community.php" class="btn">Kembali ke Komunitas</a> </div>
+            <a href="/stride/stride-report/pages/community.php" class="btn">Kembali ke Komunitas</a>
+        </div>
     </div>
 </div>
 
